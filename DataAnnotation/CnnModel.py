@@ -26,7 +26,7 @@ def getEncoderModel():
 
         tf.keras.layers.Dense(64, activation=tf.keras.layers.LeakyReLU(alpha=0.01), name='Dense1'),
         tf.keras.layers.Dense(32, activation=tf.keras.layers.LeakyReLU(alpha=0.01), name='Dense2'),
-        tf.keras.layers.Dense(3, activation='softmax')
+        tf.keras.layers.Dense(4, activation='softmax')
     ])
 
     # Model metrics
@@ -56,6 +56,6 @@ def getFullNet():
     x = layers.Flatten()(x)
     x = layers.Dense(64, activation=tf.keras.layers.LeakyReLU(alpha=0.01), name='dense1')(x)
     x = layers.Dense(32, activation=tf.keras.layers.LeakyReLU(alpha=0.01), name='dense2')(x)
-    x = layers.Dense(3, activation='softmax', name='pred')(x)
+    x = layers.Dense(4, activation='softmax', name='pred')(x)
 
     return keras.Model(inputs=input, outputs=x, name='model_1')
