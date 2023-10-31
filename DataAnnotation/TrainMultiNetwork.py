@@ -14,7 +14,7 @@ epochs = 5
 
 # Create training and test datasets
 print("Dataset loading")
-X_train, X_test, y_train, y_test = loadDataset("TestDataset.csv")
+X_train, X_test, y_train, y_test = loadDataset("TestDataset - Kopi.csv")
 
 trainImg = []
 testImg = []
